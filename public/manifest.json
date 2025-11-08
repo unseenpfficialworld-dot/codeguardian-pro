@@ -1,0 +1,240 @@
+{
+  "name": "CodeGuardian Pro - AI Code Analysis",
+  "short_name": "CodeGuardian",
+  "description": "AI-powered complete project debugging and code analysis platform with intelligent error detection and automatic fixes",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#3b82f6",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": [
+    "development",
+    "productivity",
+    "utilities"
+  ],
+  "icons": [
+    {
+      "src": "/icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/dashboard-large.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "CodeGuardian Pro Dashboard showing project analysis"
+    },
+    {
+      "src": "/screenshots/dashboard-small.png",
+      "sizes": "720x1280",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Mobile view of CodeGuardian Pro analysis results"
+    },
+    {
+      "src": "/screenshots/analysis-large.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Detailed code analysis with error breakdown and fixes"
+    },
+    {
+      "src": "/screenshots/upload-large.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Multiple upload options including GitHub, Google Drive, and direct upload"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "New Project",
+      "short_name": "Upload",
+      "description": "Start a new code analysis project",
+      "url": "/upload",
+      "icons": [
+        {
+          "src": "/icons/upload-icon-96x96.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Dashboard",
+      "short_name": "Projects",
+      "description": "View your analysis projects",
+      "url": "/dashboard",
+      "icons": [
+        {
+          "src": "/icons/dashboard-icon-96x96.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "History",
+      "short_name": "History",
+      "description": "View analysis history",
+      "url": "/history",
+      "icons": [
+        {
+          "src": "/icons/history-icon-96x96.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "web",
+      "url": "https://codeguardian.pro"
+    }
+  ],
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "protocol_handlers": [
+    {
+      "protocol": "web+codeguardian",
+      "url": "/protocol-handler?url=%s"
+    }
+  ],
+  "share_target": {
+    "action": "/share",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "description",
+      "url": "link",
+      "files": [
+        {
+          "name": "codeFiles",
+          "accept": [
+            ".js",
+            ".jsx",
+            ".ts",
+            ".tsx",
+            ".py",
+            ".java",
+            ".cpp",
+            ".c",
+            ".cs",
+            ".php",
+            ".rb",
+            ".go",
+            ".rs",
+            ".html",
+            ".css",
+            ".scss",
+            ".json",
+            ".xml",
+            ".yaml",
+            ".yml",
+            ".md",
+            ".txt"
+          ]
+        }
+      ]
+    }
+  },
+  "file_handlers": [
+    {
+      "action": "/upload",
+      "accept": {
+        "text/*": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx",
+          ".py",
+          ".java",
+          ".cpp",
+          ".c",
+          ".cs",
+          ".php",
+          ".rb",
+          ".go",
+          ".rs",
+          ".html",
+          ".css",
+          ".scss",
+          ".json",
+          ".xml",
+          ".yaml",
+          ".yml",
+          ".md",
+          ".txt"
+        ],
+        "application/zip": [".zip"]
+      }
+    }
+  ],
+  "launch_handler": {
+    "client_mode": "focus-existing"
+  },
+  "handle_links": "preferred",
+  "permissions": [
+    "clipboard-read",
+    "clipboard-write",
+    "notifications"
+  ],
+  "display_override": [
+    "window-controls-overlay",
+    "minimal-ui"
+  ],
+  "iarc_rating_id": "e58b78d2-8f32-4ac6-9c8c-8c5c5c5c5c5c"
+}
